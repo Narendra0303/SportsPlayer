@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palyer Detail Information</title>
+<style>
+    h1{
+        text-align: center;
+        color: orange;
+    }
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+
+
+<h1>Details of {{ player.PlayerName }}</h1>
+
+
+<h3><em> Name:{{ player.PlayerName}}</em></h3>
+<h3><em> DOB:{{player.Born}}</em></h3>
+<h3><em> Birthplace:{{ player.Birthplace}}</em></h3>
+<h3><em> Height:{{ player.Height }}</em></h3>
+        <h3><em>City:{{ player.City }}</em></h3>
+        <h3><em>Batting Style:{{ player.BattingStyle }}</em></h3>
+        <h3><em>Bowling Style:{{ player.BowlingStyle }}</em></h3>
+
+        <h3><em>Country:{{ player.Country }}</em></h3>
+        <h3><em>Role:{{ player.Role }}</em></h3>
+
+        <h3><em>Awards:{{ player.Awards }}</em></h3>
+
+
+
+<form action="/update/{{ player.id }}"enctype=multipart/form-data>
+
+
+  <input  class="btn btn-warning" type="submit" value="Update">
+    </form>
+<p>
+
+</p>
+    <form action="/delete/{{ player.id }}"enctype=multipart/form-data>
+    <input  class="btn btn-warning" type="submit" value="Delete">
+
+    </form>
+
+  </div>
+</div>
+
+</body>
+{% endblock %}
+</html>

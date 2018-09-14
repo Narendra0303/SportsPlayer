@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    input,textarea{
+        width: 100%;
+    }
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+
+        <h3><em>Please SIGN UP is Here!</em></h3>
+<form method="POST" enctype=multipart/form-data>
+
+    {{ form.as_p }}
+    {% csrf_token %}
+
+<input  class="btn btn-success" type="submit" value="Sign Up">
+</form>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+</body>
+{% endblock %}
+</html>

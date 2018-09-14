@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Update information</title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+
+<h3><em>Please Update the Player view here!</em></h3>
+        <h3>{{ actor.name }}</h3>
+
+
+<form method="POST" enctype=multipart/form-data>
+
+
+    {{ form.as_p }}
+    {% csrf_token %}
+
+<input  class="btn btn-warning" type="submit" value="Update">
+</form>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+</body>
+{% endblock %}
+</html>

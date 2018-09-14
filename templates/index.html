@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player List</title>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="jumbotron">
+{% for x in player_list %}
+
+        <a href="/detail/{{ x.id }}"> <h3><em>{{ x.PlayerName }}</em></h3></a>
+
+
+
+
+{% endfor %}
+
+
+
+  </div>
+</div>
+
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Delete Page</title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+
+<h1><em>Please Delete the Player view here!</em></h1>
+        <h3>{{player.PlayerName }}</h3>
+<form method="POST" enctype=multipart/form-data>
+
+    {{ form.as_p }}
+    {% csrf_token %}
+
+<input  class="btn btn-warning" type="submit" value="Delete">
+</form>
+
+
+
+  </div>
+</div>
+{% endblock %}
+</body>
+
+</html>
